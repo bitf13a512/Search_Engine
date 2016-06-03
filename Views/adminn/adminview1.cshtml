@@ -1,0 +1,533 @@
+﻿@{
+    ViewBag.Title = "adminview";
+}
+
+<!DOCTYPE html>
+<head>
+    <title>ADMIN PANEL</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="~/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="~/js/move-top.js"></script>
+    <script type="text/javascript" src="~/js/easing.js"></script>
+    @Html.Partial("_header");
+</head>
+<body style="background-color:black;">
+    
+    <script>
+
+        
+        
+    
+        window.onload = function () {
+            noBack();
+        }
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+
+        $('#hello1').click(function () {
+            var id = "bluetooth";
+            var value = $('#hello1').val();
+            
+
+            $('#d1').load('../adminn/catagory1?cat=' + id);
+            //$('#d1').load("hello");
+
+
+        });
+
+
+        $('#hello2').click(function () {
+            var id = "hardware"
+            var value = $('#hello2').val();
+            
+            $('#d1').load('../adminn/catagory1?cat=' + id);
+            //$('#d1').load("hello");
+
+
+        });
+
+        $('#hello3').click(function () {
+            var id = "headphone"
+            var value = $('#hello3').val();
+            
+            $('#d1').load('../adminn/catagory1?cat=' + id);
+            //$('#d1').load("hello");
+
+
+        });
+
+
+        $('#hello4').click(function () {
+            var id = "keyboard"
+            var value = $('#hello4').val();
+            
+            $('#d1').load('../adminn/catagory1?cat=' + id);
+            //$('#d1').load("hello");
+
+
+        });
+
+
+        $('#hello5').click(function () {
+            var id = "laptops"
+            var value = $('#hello5').val();
+            
+            $('#d1').load('../adminn/catagory1?cat=' + id);
+            //$('#d1').load("hello");
+
+
+        });
+
+
+        $('#hello6').click(function () {
+            var id = "lcd"
+            var value = $('#hello6').val();
+            
+            $('#d1').load('../adminn/catagory1?cat=' + id);
+            //$('#d1').load("hello");
+
+
+        });
+
+
+        $('#hello7').click(function () {
+            var id = "mouse"
+            var value = $('#hello7').val();
+            
+            $('#d1').load('../adminn/catagory1?cat=' + id);
+            //$('#d1').load("hello");
+
+
+        });
+
+
+        $('#hello12').click(function () {
+            var id = "printers"
+            var value = $('#hello12').val();
+            
+            $('#d1').load('../adminn/catagory1?cat=' + id);
+            //$('#d1').load("hello");
+
+
+        });
+
+
+        $('#hello8').click(function () {
+            var id = "speakers"
+            var value = $('#hello8').val();
+            
+            $('#d1').load('../adminn/catagory1?cat=' + id);
+            //$('#d1').load("hello");
+
+
+        });
+
+
+        $('#hello9').click(function () {
+            var id = "tablet"
+            var value = $('#hello9').val();
+            
+            $('#d1').load('../adminn/catagory1?cat=' + id);
+            //$('#d1').load("hello");
+
+
+        });
+
+
+        $('#hello10').click(function () {
+            var id = "usb"
+            var value = $('#hello10').val();
+           
+            $('#d1').load('../adminn/catagory1?cat=' + id);
+            //$('#d1').load("hello");
+
+
+        });
+
+
+        $('#hello11').click(function () {
+            var id = "woofer"
+            var value = $('#hello11').val();
+            
+            $('#d1').load('../adminn/catagory1?cat=' + id);
+            //$('#d1').load("hello");
+
+
+        });
+        function f1(value) {
+            var xmlhttp2;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari  
+                xmlhttp2 = new XMLHttpRequest();
+            }
+            xmlhttp2.open("GET", "../adminn/headphonecart?textName=" + value, true);
+            xmlhttp2.send();
+
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+                    
+                    response1 = xmlhttp2.responseText;
+                   
+
+
+                }
+                document.getElementById("d1").innerHTML = response1;
+                
+            }
+
+        }
+        function f2(value) {
+            var xmlhttp2;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari  
+                xmlhttp2 = new XMLHttpRequest();
+            }
+            xmlhttp2.open("GET", "../adminn/woofercart?textName=" + value, true);
+            xmlhttp2.send();
+
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+                    
+                    response1 = xmlhttp2.responseText;
+                 
+
+
+                }
+                document.getElementById("d1").innerHTML = response1;
+               
+            }
+
+        }
+        function f3(value) {
+            var xmlhttp2;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari  
+                xmlhttp2 = new XMLHttpRequest();
+            }
+            xmlhttp2.open("GET", "../adminn/usbcart?textName=" + value, true);
+            xmlhttp2.send();
+
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+                    
+                    response1 = xmlhttp2.responseText;
+                   
+
+
+                }
+                document.getElementById("d1").innerHTML = response1;
+                
+            }
+
+        }
+        function f4(value) {
+            var xmlhttp2;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari  
+                xmlhttp2 = new XMLHttpRequest();
+            }
+            xmlhttp2.open("GET", "../adminn/tabletcart?textName=" + value, true);
+            xmlhttp2.send();
+
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+                    
+                    response1 = xmlhttp2.responseText;
+                   
+
+
+                }
+                document.getElementById("d1").innerHTML = response1;
+               
+            }
+
+        }
+        function f5(value) {
+            var xmlhttp2;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari  
+                xmlhttp2 = new XMLHttpRequest();
+            }
+            xmlhttp2.open("GET", "../adminn/speakerscart?textName=" + value, true);
+            xmlhttp2.send();
+
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+                    
+                    response1 = xmlhttp2.responseText;
+                    
+
+
+                }
+                document.getElementById("d1").innerHTML = response1;
+                
+            }
+
+        }
+        function f6(value) {
+            var xmlhttp2;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari  
+                xmlhttp2 = new XMLHttpRequest();
+            }
+            xmlhttp2.open("GET", "../adminn/printerscart?textName=" + value, true);
+            xmlhttp2.send();
+
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+                    
+                    response1 = xmlhttp2.responseText;
+                  
+
+
+                }
+                document.getElementById("d1").innerHTML = response1;
+                
+            }
+
+        }
+        function f7(value) {
+            var xmlhttp2;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari  
+                xmlhttp2 = new XMLHttpRequest();
+            }
+            xmlhttp2.open("GET", "../adminn/mousecart?textName=" + value, true);
+            xmlhttp2.send();
+
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+                   
+                    response1 = xmlhttp2.responseText;
+                   
+
+
+                }
+                document.getElementById("d1").innerHTML = response1;
+                
+            }
+
+        }
+        function f8(value) {
+            var xmlhttp2;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari  
+                xmlhttp2 = new XMLHttpRequest();
+            }
+            xmlhttp2.open("GET", "../adminn/lcdcart?textName=" + value, true);
+            xmlhttp2.send();
+
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+                    
+                    response1 = xmlhttp2.responseText;
+                  
+
+
+                }
+                document.getElementById("d1").innerHTML = response1;
+              
+            }
+
+        }
+        function f9(value) {
+            var xmlhttp2;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari  
+                xmlhttp2 = new XMLHttpRequest();
+            }
+            xmlhttp2.open("GET", "../adminn/laptopscart?textName=" + value, true);
+            xmlhttp2.send();
+
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+                    
+                    response1 = xmlhttp2.responseText;
+                   
+
+
+                }
+                document.getElementById("d1").innerHTML = response1;
+               
+            }
+
+        }
+        function f10(value) {
+            var xmlhttp2;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari  
+                xmlhttp2 = new XMLHttpRequest();
+            }
+            xmlhttp2.open("GET", "../adminn/keyboardcart?textName=" + value, true);
+            xmlhttp2.send();
+
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+                  
+                    response1 = xmlhttp2.responseText;
+                    
+
+
+                }
+                document.getElementById("d1").innerHTML = response1;
+                
+            }
+
+        }
+        function f11(value) {
+            var xmlhttp2;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari  
+                xmlhttp2 = new XMLHttpRequest();
+            }
+            xmlhttp2.open("GET", "../adminn/hardwarecart?textName=" + value, true);
+            xmlhttp2.send();
+
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+                   
+                    response1 = xmlhttp2.responseText;
+                   
+
+
+                }
+                document.getElementById("d1").innerHTML = response1;
+                
+            }
+
+        }
+        function f12(value) {
+            var xmlhttp2;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari  
+                xmlhttp2 = new XMLHttpRequest();
+            }
+            xmlhttp2.open("GET", "../admin/bluetoothcart?textName=" + value, true);
+            xmlhttp2.send();
+
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+                    
+                    response1 = xmlhttp2.responseText;
+                   
+
+
+                }
+                document.getElementById("d1").innerHTML = response1;
+               
+            }
+
+        }
+        function g1(value) {
+            var xmlhttp2;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari  
+                xmlhttp2 = new XMLHttpRequest();
+            }
+            
+            xmlhttp2.open("GET", "../adminn/update?textName=" + value, true);
+            xmlhttp2.send();
+
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+                    
+                    response1 = xmlhttp2.responseText;
+                    
+
+
+                }
+                document.getElementById("d1").innerHTML = response1;
+                //alert(value1);
+            }
+
+        }
+        </script>
+@if (Session["username"] == "admin")
+{ 
+    <div class="wrap">
+
+
+
+       
+        <div class="main">
+
+            <div class="content">
+                <div class="section group">
+                    <div class="col span_2_of_3">
+                        
+
+                        
+                        <div class="contact-form">
+                            <h2><b>INSERT IMAGE</b></h2>
+
+                            @{using (Html.BeginForm("check", "adminn", FormMethod.Post,
+                            new { enctype = "multipart/form-data" }))
+                            {
+
+
+                                <div>
+                                    <span><label><b>PRODUCT NAME</b></label></span>
+                                    <span><input name="productname" type="text" class="textbox"></span>
+                                </div>
+                                
+                                <div>
+
+                                    <span><label><b>PRICE</b></label></span>
+                                    <span><input name="price" type="text" class="textbox"></span>
+                                </div>
+                                <div>
+                                    <span><label><b>DESCRIPTION</b></label></span>
+                                    <span><textarea name="description"> </textarea></span>
+                                </div>
+                                <div>
+                                    <span><label><b>IMAGE</b></label></span>
+                                    <span><input type="file" name="file" id="file" /> </span>
+                                </div>
+                                <div>
+                                    <span><label><b>SELECT CATAGORY</b></label></span>
+                                    <input type="radio" name="tablename" value="speakers"> Speakers
+                                    <input type="radio" name="tablename" value="hardware"> Hardware
+                                    <input type="radio" name="tablename" value="bluetooth"> Bluetooth
+                                    <input type="radio" name="tablename" value="tablet"> Tablet
+                                    <input type="radio" name="tablename" value="usb"> usb
+                                    <input type="radio" name="tablename" value="woofer"> woofer<br>
+                                    <input type="radio" name="tablename" value="headphone"> Headphones
+                                    <input type="radio" name="tablename" value="keyboard"> Keyboard
+                                    <input type="radio" name="tablename" value="laptop"> Laptops
+                                    <input type="radio" name="tablename" value="printer"> Printers
+                                    <input type="radio" name="tablename" value="mouse"> Mouse
+                                    <input type="radio" name="tablename" value="lcd">Lcd
+                                    
+                                </div>
+                                <div>
+                                    <span><input type="submit" value="Insert Image" class="myButton"></span>
+                                    <div><span><input type="reset" value="Cancel" class="myButton"></span></div>
+                                </div>
+                                
+
+                            }
+                            }
+                        
+                    </div>
+                    </div>
+                    
+                </div>
+ </div>               
+        </div>
+
+    </div>
+}
+else
+{
+    Response.Redirect("../adminn/index"); 
+}
+        <div class="main" style="background-color:black;">
+            <div class="content"style="background-color:black;">
+                <div id="d1">
+                </div>
+
+                
+            </div>
+        </div>
+        </div>
+
+
+
+
+
+    </body>
+    </html>
+
+
+

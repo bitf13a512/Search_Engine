@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "update";
+}
+
+
+
+<div class="main">
+
+    <div class="content">
+        <div class="section group">
+            <div class="col span_2_of_3">
+                <div class="contact-form">
+                    <h2><b>ADMIN PANEL</b></h2>
+                  
+                  <form action="../adminn/update1" method="post"> 
+                    
+
+
+                        <div>
+                            <span><label><b>PRODUCT NAME</b></label></span>
+                            <span><input name="productname" type="text" class="textbox" value="@Model.catagory"></span>
+                        </div>
+
+                        <div>
+
+                            <span><label><b>PRICE</b></label></span>
+                            <span><input name="price" type="text" class="textbox" value="@Model.price"></span>
+                        </div>
+                        <div>
+                            <span><label><b>DESCRIPTION</b></label></span>
+                            <span><textarea name="description" @Model.description> </textarea></span>
+                        </div>
+                        <div>
+                            <span><label><b>IMAGE</b></label></span>
+                            <span><input type="file" name="file" id="file" @Model.pic/> </span>
+                        </div>
+                        <div>
+                            <span><label><b>SELECT CATAGORY</b></label></span>
+                            <input type="radio" name="tablename" value="speakers"> Speakers
+                            <input type="radio" name="tablename" value="hardware"> Hardware
+                            <input type="radio" name="tablename" value="bluetooth"> Bluetooth
+                            <input type="radio" name="tablename" value="tablet"> Tablet
+                            <input type="radio" name="tablename" value="usb"> usb
+                            <input type="radio" name="tablename" value="woofer"> woofer<br>
+                            <input type="radio" name="tablename" value="headphone"> Headphones
+                            <input type="radio" name="tablename" value="keyboard"> Keyboard
+                            <input type="radio" name="tablename" value="laptop"> Laptops
+                            <input type="radio" name="tablename" value="printer"> Printers
+                            <input type="radio" name="tablename" value="mouse"> Mouse
+                            <input type="radio" name="tablename" value="lcd">Lcd
+
+                        </div>
+                        <div>
+                            <span><input type="submit" value="EDIT" class="myButton"></span>
+                            <div><span><input type="reset" value="Cancel" class="myButton"></span></div>
+                        </div>
+                        
+                      </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
